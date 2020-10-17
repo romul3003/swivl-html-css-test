@@ -1,7 +1,15 @@
 @import '../helpers/mixins';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   @include font('Open Sans');
+}
+
+body {
+  background: #f2f2f2;
 }
 
 h1, h2, h3, h4, h5, h6, ul {
@@ -9,7 +17,37 @@ h1, h2, h3, h4, h5, h6, ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul {
+  list-style-type: none;
+}
+
+picture {
+  display: inline-block;
+}
+
+button {
+  @include hover-desktop {
+    cursor: pointer;
+  }
+
+  border: none;
+  padding: 0;
+  vertical-align: middle;
+}
+
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }

@@ -1,0 +1,34 @@
+.navigation {
+  display: inline-flex;
+  position: relative;
+  padding-bottom: 19px;
+
+  &__link {
+    margin-right: 2.65em;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    mix-blend-mode: normal;
+    line-height: 19px;
+    color: #3e4056;
+    opacity: .6;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &_active {
+      opacity: 1;
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-image: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+    transition: width .5s, left .5s;
+  }
+}
