@@ -1,11 +1,21 @@
+@import '../../../styles/helpers/mixins';
+
 .profile {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin-right: -7px;
+  margin-right: 0 -7px 0 0;
+
+  @include media-desktop-first(mobile-portrait) {
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 20px;
+  }
 
   &__user {
     display: flex;
     align-items: center;
+    margin: 0 17px 0 0;
   }
 
   &__user-name {
@@ -31,7 +41,10 @@
   &__icons {
     display: flex;
     align-items: center;
-    margin-left: 17px;
+
+    @include media-desktop-first(mobile-portrait) {
+      margin: 0 -7px;
+    }
   }
 
   &__icon-btn {

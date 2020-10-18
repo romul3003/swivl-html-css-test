@@ -1,10 +1,14 @@
-//@import '../../../styles/helpers/mixins';
+@import '../../../styles/helpers/mixins';
 
 .header {
   display: flex;
   height: 112px;
   background-color: #fff;
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.06);
+
+  @include media-desktop-first(mobile-portrait) {
+    height: initial;
+  }
 
   &__container {
     display: flex;
@@ -20,11 +24,23 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    @include media-desktop-first(mobile-portrait) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: unset;
+    }
   }
 
-  &__logo img {
-    display: block;
-    width: 50px;
-    height: 23px;
+  &__logo {
+    @include media-desktop-first(mobile-portrait) {
+      margin-bottom: 17px;
+    }
+
+    img {
+      display: block;
+      width: 50px;
+      height: 23px;
+    }
   }
 }

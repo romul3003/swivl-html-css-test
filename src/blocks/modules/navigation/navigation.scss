@@ -13,6 +13,10 @@
     color: #3e4056;
     opacity: .6;
 
+    @include media-desktop-first(mobile-portrait) {
+      margin-right: 1.6em;
+    }
+
     &:last-of-type {
       margin-right: 0;
     }
