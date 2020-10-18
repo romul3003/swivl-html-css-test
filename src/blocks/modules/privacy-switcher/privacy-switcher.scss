@@ -1,0 +1,45 @@
+.privacy-switcher {
+  display: flex;
+  align-items: center;
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 24px;
+    border-radius: 3em;
+    margin: 0 30px;
+    background-color: #ed5267;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:checked {
+      background: #ff974f;
+
+      &::after {
+        left: calc(100% - 3px);
+        transform: translateX(-100%);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #fff;
+      box-shadow: 0 0 .25em rgba(0, 0, 0, .3);
+      transition: all .2s ease-in-out;
+    }
+  }
+
+  &__state {
+    font-weight: 600;
+    line-height: 1.33;
+  }
+}
