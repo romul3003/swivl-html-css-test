@@ -1,0 +1,100 @@
+@import '../../../styles/helpers/mixins';
+
+.cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+
+  &__item {
+    box-shadow: 0 24px 24px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.card {
+  padding: 56px 24px 24px;
+  background-color: rgba(255, 255, 255, .5);
+  mix-blend-mode: normal;
+
+  &__title {
+    display: block;
+    height: 155px;
+    margin-bottom: 20px;
+    padding-bottom: 23px;
+    font-size: 36px;
+    line-height: 44px;
+    color: #3e4056;
+    overflow: auto;
+    @include font('Montserrat');
+    @include hover-desktop {
+      color: lighten(#3e4056, 10);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3e4056;
+    @include hover-desktop {
+      color: lighten(#3e4056, 10);
+    }
+  }
+
+  &__author-image {
+    padding-right: 8px;
+  }
+
+  &__share {
+    font-size: 18px;
+    line-height: 25px;
+    color: #f05d63;
+    @include hover-desktop {
+      color: darken(#f05d63, 10);
+    }
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    margin: 0 -8px;
+  }
+
+  &__stats-views, &__stats-likes {
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3e4056;
+    &::before {
+      content: '';
+      margin-right: 8px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__stats-views {
+    &::before {
+      width: 16px;
+      height: 16px;
+      background-image: url('../img/svg/view.svg');
+    }
+  }
+
+  &__stats-likes {
+    &::before {
+      width: 16px;
+      height: 14px;
+      background-image: url('../img/svg/heart.svg');
+    }
+  }
+}
