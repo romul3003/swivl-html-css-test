@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>gulp-scss-starter</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+        <link rel="stylesheet" href="../styles/main.min.css">
+    </head>
+    <body>
+      <header class="header">
+  <div class="header__container container">
+    <div class="header__top">
+      <a href="#" class="header__logo logo">
+        <img src="./img/svg/logo.svg" alt="logo">
+      </a>
+      <div class="profile">
+  <ul class="profile__user">
+    <li class="profile__user-item">
+      <div class="profile__user-name">
+        Arthur Wood
+      </div>
+    </li>
+    <li class="profile__user-item">
+      <picture>
+        <source srcset="./img/profile-img.webp" type="image/webp">
+        <img src="./img/profile-img.png"
+             srcset="./img/profile-img@2x.png 2x,
+             ./img/profile-img@3x.png 3x"
+             class="profile__user-img"
+             alt="Profile user image">
+      </picture>
+    </li>
+    <li class="profile__user-item">
+      <button type="button" class="profile__user-show-more-btn"></button>
+    </li>
+  </ul>
+
+  <ul class="profile__icons">
+    <li class="profile__icon-item">
+      <button type="button" class="profile__icon-btn profile__icon-btn_share-recap"></button>
+    </li>
+    <li class="profile__icon-item">
+      <button type="button" class="profile__icon-btn profile__icon-btn_notifications"></button>
+    </li>
+    <li class="profile__icon-item">
+      <button type="button" class="profile__icon-btn profile__icon-btn_medium"></button>
+    </li>
+  </ul>
+</div>
+
+    </div>
+    <nav id="nav" class="navigation">
+  <a href="#" class="navigation__link navigation__link_active">Feed</a>
+  <a href="#" class="navigation__link">Explore</a>
+  <a href="#" class="navigation__link">Discussions</a>
+  <div id="marker" class="navigation__marker"></div>
+</nav>
+
+    <button type="button" class="action-button">
+  <span class="action-button__plus">
+    <span class="action-button__bar action-button__bar_vertical"></span>
+    <span class="action-button__bar action-button__bar_gorizontal"></span>
+  </span>
+</button>
+
+  </div>
+</header>
+
+      <main>
+        <div class="container">
+          <div class="main-block">
+  <div class="main-block__col-left">
+    <div class="user-details">
+  <div class="user-details__row">
+    <div class="user-details__content">
+      <div class="profile-details">
+  <div class="profile-details__image-wrap">
+    <picture>
+      <source srcset="./img/avatar.webp" type="image/webp">
+      <img src="./img/avatar.png"
+           srcset="./img/avatar@2x.png 2x,
+             ./img/avatar@3x.png 3x"
+           class="profile-details__image"
+           alt="Avatar">
+    </picture>
+  </div>
+  <div class="profile-details__user user">
+    <h3 class="user__name">
+      Benjamin Clementine
+    </h3>
+
+    <p class="user__nickname">@benclementine</p>
+
+    <a href="#" class="user__edit-profile">
+      Edit profile
+    </a>
+  </div>
+</div>
+
+      <div class="followers">
+  <div class="followers__item">
+    <div class="followers__count">45</div>
+    <div class="followers__title">synths</div>
+  </div>
+
+  <div class="followers__item">
+    <div class="followers__count">110</div>
+    <div class="followers__title">followers</div>
+  </div>
+
+  <div class="followers__item">
+    <div class="followers__count">322</div>
+    <div class="followers__title">following</div>
+  </div>
+</div>
+
+    </div>
+    <div class="user-details__options">
+      <button type="button" id="userMenuBtn" class="user-details__menu-btn menu-btn">
+        <span class="menu-btn__circle"></span>
+        <span class="menu-btn__circle"></span>
+        <span class="menu-btn__circle"></span>
+      </button>
+
+      <ul id="userMenu" class="user-details__menu">
+        <li class="user-details__menu-item user-details__menu-item_report-user">
+          <a href="#" class="user-details__menu-link">Report User</a>
+        </li>
+        <li class="user-details__menu-item user-details__menu-item_block-user">
+          <a href="#" class="user-details__menu-link">Block User</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="user-details__description">
+    Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum.
+  </p>
+</div>
+
+  </div>
+  <div class="main-block__col-right">
+    <div class="privacy-switcher">
+  <div class="privacy-switcher__state">Public</div>
+
+  <label>
+    <input type="checkbox" id="privacySwitcherCheckbox" class="privacy-switcher__checkbox">
+  </label>
+
+  <div class="privacy-switcher__state">Private</div>
+</div>
+
+
+
+
+    <ul class="cards-list">
+  <li class="cards-list__item">
+    <div class="card">
+      <a href="#" class="card__title">
+        New air routes that promise cheap flights in
+      </a>
+
+      <div class="card__footer">
+        <a href="#" class="card__author">
+          <picture>
+            <source srcset="./img/Oval.webp" type="image/webp">
+            <img src="./img/Oval.png"
+                 srcset="./img/Oval@2x.png 2x,
+             ./img/Oval@3x.png 3x"
+                 class="card__author-image"
+                 alt="Author avatar">
+          </picture>
+          <span>Gregory Watkins</span>
+        </a>
+        <a href="#" class="card__share">Share</a>
+      </div>
+    </div>
+  </li>
+  <li class="cards-list__item">
+    <div class="card">
+      <a href="#" class="card__title">
+        New air routes that promise cheap flights in
+      </a>
+
+      <div class="card__footer">
+        <a href="#" class="card__author">
+          <picture>
+            <source srcset="./img/Oval.webp" type="image/webp">
+            <img src="./img/Oval.png"
+                 srcset="./img/Oval@2x.png 2x,
+             ./img/Oval@3x.png 3x"
+                 class="card__author-image"
+                 alt="Author avatar">
+          </picture>
+          <span>Gregory Watkins</span>
+        </a>
+        <a href="#" class="card__share">Share</a>
+      </div>
+    </div>
+  </li>
+  <li class="cards-list__item">
+    <div class="card">
+      <a href="#" class="card__title">
+        New air routes that promise cheap flights in
+      </a>
+
+      <div class="card__footer">
+        <a href="#" class="card__author">
+          <picture>
+            <source srcset="./img/Oval.webp" type="image/webp">
+            <img src="./img/Oval.png"
+                 srcset="./img/Oval@2x.png 2x,
+             ./img/Oval@3x.png 3x"
+                 class="card__author-image"
+                 alt="Author avatar">
+          </picture>
+          <span>Gregory Watkins</span>
+        </a>
+        <div class="card__stats">
+          <div class="card__stats-item">
+            <div class="card__stats-views">
+              <span>88</span>
+            </div>
+          </div>
+          <div class="card__stats-item">
+            <div class="card__stats-likes">
+              <span>24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="cards-list__item">
+    <div class="card">
+      <a href="#" class="card__title">
+        New air routes that promise cheap flights in
+      </a>
+
+      <div class="card__footer">
+        <a href="#" class="card__author">
+          <picture>
+            <source srcset="./img/Oval.webp" type="image/webp">
+            <img src="./img/Oval.png"
+                 srcset="./img/Oval@2x.png 2x,
+             ./img/Oval@3x.png 3x"
+                 class="card__author-image"
+                 alt="Author avatar">
+          </picture>
+          <span>Gregory Watkins</span>
+        </a>
+        <div class="card__stats">
+          <div class="card__stats-item">
+            <div class="card__stats-views">
+              <span>88</span>
+            </div>
+          </div>
+          <div class="card__stats-item">
+            <div class="card__stats-likes">
+              <span>24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+        </div>
+      </main>
+      
+      <script src="../js/main.min.js"></script>
+<!--        <script src="../js/vendor.min.js"></script>-->
+    </body>
+</html>
