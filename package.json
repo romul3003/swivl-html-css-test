@@ -3,6 +3,7 @@
     "description": "Frontend development with pleasure",
     "author": "Roman Zakrevskyi",
     "license": "MIT",
+    "homepage": "https://romul3003.github.io/swivl-html-css-test",
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
@@ -16,7 +17,9 @@
         "build favicons": "gulp favicons --production",
         "build gzip": "gulp gzip --production",
         "lint:style": "stylelint \"src/**/*.scss\" --syntax=scss",
-        "lint:style --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix"
+        "lint:style --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix",
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -d build"
     },
     "devDependencies": {
         "@babel/core": "^7.12.1",
@@ -62,6 +65,7 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.12.1",
+        "gh-pages": "^3.1.0",
         "jquery": "^3.5.1",
         "normalize.css": "^8.0.1"
     }
