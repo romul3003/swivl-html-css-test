@@ -1,3 +1,6 @@
+# Страница тестового задания на gh-pages:
+https://romul3003.github.io/swivl-html-css-test/
+
 # gulp-scss-starter
 
 ## Особенности
