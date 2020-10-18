@@ -18,7 +18,10 @@
     height: 24px;
     border-radius: 3em;
     margin: 0 30px;
+    border: 1px solid #ed5267;
     background-color: #ed5267;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none;
     outline: none;
     cursor: pointer;
@@ -26,6 +29,7 @@
 
     &:checked {
       background-color: #ff974f;
+      border: 1px solid #ff974f;
 
       &::after {
         left: calc(100% - 3px);
