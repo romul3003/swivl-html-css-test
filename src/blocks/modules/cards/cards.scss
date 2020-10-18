@@ -5,28 +5,43 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 24px;
 
+  @include media-desktop-first(mobile-portrait) {
+    grid-template-columns: 1fr;
+  }
+
   &__item {
+    display: flex;
     box-shadow: 0 24px 24px rgba(0, 0, 0, 0.12);
   }
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   padding: 56px 24px 24px;
   background-color: rgba(255, 255, 255, .5);
   mix-blend-mode: normal;
 
   &__title {
     display: block;
-    height: 155px;
-    margin-bottom: 20px;
-    padding-bottom: 23px;
+    flex-grow: 1;
+    //height: 155px;
+    //margin-bottom: 20px;
+    //padding-bottom: 23px;
+    padding-bottom: 43px;
     font-size: 36px;
     line-height: 44px;
     color: #3e4056;
-    overflow: auto;
+    //overflow: auto;
     @include font('Montserrat');
+
     @include hover-desktop {
       color: lighten(#3e4056, 10);
+    }
+
+    @include media-desktop-first(mobile-landscape) {
+      font-size: 30px;
+      line-height: 1.25;
     }
   }
 
@@ -34,6 +49,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include media-desktop-first(mobile-small) {
+      flex-direction: column;
+      align-items: unset;
+      justify-content: unset;
+    }
   }
 
   &__author {
@@ -45,6 +66,10 @@
     color: #3e4056;
     @include hover-desktop {
       color: lighten(#3e4056, 10);
+    }
+
+    @include media-desktop-first(mobile-small) {
+      margin-bottom: 20px;
     }
   }
 

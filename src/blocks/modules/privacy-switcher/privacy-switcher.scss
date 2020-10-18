@@ -1,7 +1,14 @@
+@import '../../../styles/helpers/mixins';
+
 .privacy-switcher {
   display: flex;
   align-items: center;
   margin-bottom: 65px;
+
+  @include media-desktop-first(tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
 
   &__checkbox {
     display: flex;
@@ -18,7 +25,7 @@
     transition: all .2s ease-in-out;
 
     &:checked {
-      background: #ff974f;
+      background-color: #ff974f;
 
       &::after {
         left: calc(100% - 3px);

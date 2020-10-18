@@ -4,14 +4,32 @@
   display: flex;
   margin-bottom: 32px;
 
+  @include media-desktop-first(desktop) {
+    flex-direction: column;
+  }
+
   &__image-wrap {
     flex: 0 0 47%;
     max-width: 47%;
+
+    @include media-desktop-first(desktop) {
+      margin: 0 0 25px;
+    }
+
+    @include media-desktop-first(tablet) {
+      flex: 1 0 auto;
+      max-width: unset;
+    }
   }
 
   &__user {
     flex: 0 0 53%;
     max-width: 53%;
+
+    @include media-desktop-first(tablet) {
+      flex: 1 0 auto;
+      max-width: unset;
+    }
   }
 }
 

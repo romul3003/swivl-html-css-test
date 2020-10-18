@@ -10,11 +10,23 @@
     padding: 6vw 0;
   }
 
-  &__col-left {
+  @include media-desktop-first(tablet) {
+    grid-template-columns: 1fr;
+  }
 
+  @include media-desktop-first(mobile-landscape) {
+    padding: 46px 0;
+  }
+
+  &__col-left {
+    @include media-desktop-first(tablet) {
+      padding-bottom: 35px;
+    }
   }
 
   &__col-right {
-
+    @include media-desktop-first(tablet) {
+      padding-top: 35px;
+    }
   }
 }

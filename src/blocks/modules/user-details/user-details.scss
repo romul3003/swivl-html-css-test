@@ -1,4 +1,10 @@
+@import '../../../styles/helpers/mixins';
+
 .user-details {
+  @include media-desktop-first(tablet) {
+    text-align: center;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
@@ -7,12 +13,21 @@
   &__content {
     flex: 0 0 85%;
     max-width: 85%;
+
+    @include media-desktop-first(tablet) {
+      flex: 1 0 auto;
+      max-width: unset;
+    }
   }
 
   &__options {
     flex: 0 0 24px;
     position: relative;
     max-width: 24px;
+
+    @include media-desktop-first(tablet) {
+      flex: 0 1 auto;
+    }
   }
 
   &__menu {
@@ -24,6 +39,10 @@
     padding: 24px 0;
     background-color: rgba(255, 255, 255, .94);
     overflow-x: auto;
+
+    @include media-desktop-first(tablet) {
+      right: 0;
+    }
 
     &_opened {
       display: block;
@@ -71,6 +90,13 @@
   &__description {
     line-height: 1.5;
     color: #3e3f58;
+  }
+
+  &__menu-btn {
+    @include media-desktop-first(tablet) {
+      position: absolute;
+      right: 0;
+    }
   }
 }
 

@@ -1,11 +1,23 @@
+@import '../../../styles/helpers/mixins';
+
 .followers {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 23px;
+  margin: 0 0 23px;
+
+  @include media-desktop-first(tablet) {
+    max-width: 320px;
+    margin: 0 auto 23px;
+  }
 
   &__item {
     text-align: center;
     color: #3e3f58;
+
+    @include media-desktop-first(tablet) {
+      min-width: 68px;
+      margin: 0 auto 23px;
+    }
   }
 
   &__count {
