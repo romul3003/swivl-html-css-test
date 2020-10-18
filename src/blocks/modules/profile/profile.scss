@@ -1,6 +1,7 @@
 .profile {
   display: flex;
   align-items: center;
+  margin-right: -7px;
 
   &__user {
     display: flex;
@@ -8,8 +9,8 @@
   }
 
   &__user-name {
-    font-size: 16px;
-    line-height: 20px;
+    line-height: 1.25;
+    letter-spacing: -.5px;
   }
 
   &__user-img {

@@ -1,0 +1,21 @@
+.followers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 23px;
+
+  &__item {
+    text-align: center;
+    color: #3e3f58;
+  }
+
+  &__count {
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  &__title {
+    line-height: 1.33;
+  }
+}

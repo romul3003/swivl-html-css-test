@@ -1,28 +1,26 @@
 @import '../../../styles/helpers/mixins';
 
 .action-button {
-  @include hover-desktop {
-    .action-button__plus {
-      transform: rotate(180deg);
-    }
-  }
-
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 15px;
   width: 64px;
   height: 64px;
   transform: translateY(-50%);
   border-radius: 50%;
   background-image: linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
 
+  @include hover-desktop {
+    .action-button__plus {
+      transform: rotate(180deg);
+    }
+  }
+
   &:active {
-    right: 1px;
-    width: 62px;
-    height: 62px;
+    background-image: linear-gradient(135deg, #e32c75 0%, #ff974f 100%);
   }
 
   &:focus {

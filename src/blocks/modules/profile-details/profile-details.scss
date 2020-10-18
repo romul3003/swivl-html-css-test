@@ -1,0 +1,58 @@
+@import '../../../styles/helpers/mixins';
+
+.profile-details {
+  display: flex;
+  margin-bottom: 32px;
+
+  &__image-wrap {
+    flex: 0 0 47%;
+    max-width: 47%;
+  }
+
+  &__user {
+    flex: 0 0 53%;
+    max-width: 53%;
+  }
+}
+
+.user {
+  &__name {
+    margin: 0 0 .35em;
+    font-size: 24px;
+    line-height: 1.08;
+    color: #3e3f58;
+    @include font('Montserrat', 600);
+  }
+
+  &__nickname {
+    margin: 0 0 1em;
+    line-height: 1.25;
+    letter-spacing: -.5px;
+    color: #3e3f58;
+  }
+
+  &__edit-profile {
+    position: relative;
+    padding-left: 28px;
+    line-height: 1.25;
+    text-decoration: underline;
+    color: #f05d63;
+
+    @include hover-desktop {
+      color: darken(#f05d63, 10);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('../img/svg/edit.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+
+}

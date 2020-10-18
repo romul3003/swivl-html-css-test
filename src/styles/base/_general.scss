@@ -6,6 +6,7 @@
 
 html, body {
   @include font('Open Sans');
+  font-size: 16px;
 }
 
 body {
@@ -19,6 +20,7 @@ h1, h2, h3, h4, h5, h6, ul {
 
 a {
   text-decoration: none;
+  transition: color .2s, background-color .2s;
 }
 
 img {
@@ -37,13 +39,17 @@ picture {
 }
 
 button {
-  @include hover-desktop {
-    cursor: pointer;
-  }
-
   border: none;
   padding: 0;
   vertical-align: middle;
+
+  @include hover-desktop {
+    cursor: pointer;
+  }
+}
+
+p {
+  margin: 0;
 }
 
 .container {

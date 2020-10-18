@@ -1,3 +1,5 @@
+@import './variables';
+
 @mixin font-face( $font-name, $font-path, // path + file name. Ex : path/to/font/filename
 $font-weight: 400, $font-style: normal, $support-required: 'modern') {
   @font-face {
@@ -38,4 +40,32 @@ $font-weight: 400, $font-style: normal, $support-required: 'modern') {
   font-family: $font-family, $serifs;
   font-weight: $font-weight;
   font-style: $font-style;
+}
+
+@mixin media-desktop-first($range) {
+  @if $range == desktop {
+    @media (max-width: $d-desktop) {
+      @content;
+    }
+  }
+  @else if $range == tablet {
+    @media (max-width: $d-tablet) {
+      @content;
+    }
+  }
+  @else if $range == mobile-landscape {
+    @media (max-width: $d-mobileLandscape) {
+      @content;
+    }
+  }
+  @else if $range == mobile-portrait {
+    @media (max-width: $d-mobilePortrait) {
+      @content;
+    }
+  }
+  @else if $range == mobile-small {
+    @media (max-width: $d-mobileSmall) {
+      @content;
+    }
+  }
 }
